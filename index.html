@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/qwy7dph.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <!--navigation-->
+    <nav>
+        <div class="container nav-container">
+            <div class="nav-wrapper">
+                <div class="left">
+                    <a href="index.html" class="logo">Pravega Ventures</a>
+                </div>
+                <div class="right">
+                    <a href="portfolio.html">PORTFOLIO</a>
+                    <a href="team.html">TEAM</a>
+                    <a href="blog.html">BLOG</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!--navigation Ends-->
+
+    <!--hero-->
+    <div class="hero">
+        <div class="hero-slider-nav">
+            <button id="up" onclick="moveUp()">
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.62659 3.6288L7.62659 16H5.62659L5.62659 3.85258L1.3609 7.81358L0 6.34799L5.94614 0.826576L6.5753 0.242359L7.24799 0.775871L13.4065 5.6602L12.1637 7.2272L7.62659 3.6288Z"
+                        fill="#FFF4F4" />
+                </svg>
+            </button>
+            <button id="down" onclick="moveDown()">
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.62659 12.6136L7.62659 0.242432L5.62659 0.242432L5.62659 12.3899L1.3609 8.42885L0 9.89444L5.94614 15.4159L6.5753 16.0001L7.24799 15.4666L13.4065 10.5822L12.1637 9.01523L7.62659 12.6136Z"
+                        fill="#FFF4F4" />
+                </svg>
+            </button>
+        </div>
+        <div class="hero-main-wrapper">
+            <div class="hero-slider-wrapper" id="sliderController">
+                <div class="hero-slider-item active"
+                    style="background-image: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="title">Safegold: Smart savings that bring you prosperity</h1>
+                            <p class="sub-title">Read Forbes' feature on gold as a safe haven in times of uncertainty</p>
+                            <button class="primary large">Read More
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12.3712 7.62659H0V5.62659H12.1474L8.18642 1.3609L9.65201 0L15.1734 5.94614L15.7576 6.5753L15.2241 7.24799L10.3398 13.4065L8.7728 12.1637L12.3712 7.62659Z"
+                                        fill="#FFF4F4" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slider-item"
+                    style="background-image: url('https://images.unsplash.com/photo-1554224155-3a58922a22c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1925&q=80');">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="title">Shubh Saathi: A holistic financial wellness platform</h1>
+                            <p class="sub-title">Another step towards helping healthcare providers making better
+                                decisions with data</p>
+                            <button class="primary large">Read More
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12.3712 7.62659H0V5.62659H12.1474L8.18642 1.3609L9.65201 0L15.1734 5.94614L15.7576 6.5753L15.2241 7.24799L10.3398 13.4065L8.7728 12.1637L12.3712 7.62659Z"
+                                        fill="#FFF4F4" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slider-item"
+                    style="background-image: url('https://images.unsplash.com/photo-1535914254981-b5012eebbd15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="title">Shubh Saathi: A holistic financial wellness platform</h1>
+                            <p class="sub-title">Another step towards helping healthcare providers making better
+                                decisions with data</p>
+                            <button class="primary large">Read More
+                                <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12.3712 7.62659H0V5.62659H12.1474L8.18642 1.3609L9.65201 0L15.1734 5.94614L15.7576 6.5753L15.2241 7.24799L10.3398 13.4065L8.7728 12.1637L12.3712 7.62659Z"
+                                        fill="#FFF4F4" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="pull-down" href="#motto">
+            <svg width="74" height="74" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 29L37 44.5L52.5 29M73 37C73 56.8823 56.8823 73 37 73C17.1177 73 1 56.8823 1 37C1 17.1177 17.1177 1 37 1C56.8823 1 73 17.1177 73 37Z" stroke="white" stroke-width="2"/>
+                </svg>                
+        </a>
+    </div>
+    <!--hero Ends-->
+
+    <!--MOTTO-->
+
+    <section class="motto" id="motto">
+        <div class="container">
+            <div class="moto-content">
+                <p class="page-pill">OUR MOTTO</p>
+                <h1>We help passionate leaders transform ideas into category creating, best-in-class businesses</h1>
+            </div>
+        </div>   
+    </section>
+
+    <!--MOTO ENDS-->
+
+
+    <!--Recent Investments-->
+        <section class="recents">
+            <div class="left">
+                <div class="content">
+                    <h1>Check Out Recent Investments</h1> 
+                    <button class="secondary large">All Investments</button>
+                </div>
+                
+            </div>
+            <div class="right">
+                <div class="recent-list-main-wrapper">
+                    <div class="recent-list-slider-wrapper">
+                        <div class="recent-list-slider-item">
+                            <div class="recent-list-item" style="background-image:url('https://pravega-contactimages-ap-south-1.s3.amazonaws.com/media/background/greyaatom.jpg')">
+                                <div class="recent-list-content">
+                                    <img src="https://pravega-contactimages-ap-south-1.s3.amazonaws.com/media/background/Crofarm.svg" alt="">
+                                    <h1>Crofarm</h1>
+                                </div> 
+                                <p class="caption">Technology Enabled B2B Marketplace for fresh foods.</p>
+                            </div>
+                            <div class="recent-list-item" style="background-image:url('https://pravega-contactimages-ap-south-1.s3.amazonaws.com/media/background/crofarm.jpg')">
+                                <div class="recent-list-content">
+                                    <img src="https://pravega-contactimages-ap-south-1.s3.amazonaws.com/media/background/greyatom_logo.svg" alt="">
+                                    <h1>Greyatom</h1>
+                                </div> 
+                                <p class="caption">Skilling & learning platform for upcoming technologies</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    <!--End Recent Investments-->
+
+
+    <!--News-->
+    <section class="news">
+        <div class="container">
+            <h1>Recent Headlines</h1>
+            <div class="section-pill">IN NEWS</div>
+            <div class="news-list-wrapper">
+                <div class="news-list-item">
+                    <div class="news-provider">
+                        <p>ECONOMIC TIMES</p>
+                    </div>
+                    <div class="news-headlines">
+                        <a href="">[Funding alert] GreyAtom raises pre-Series A round of $1.2M from Montane Ventures, others</a>
+                    </div>
+                    <div class="post-date"><p>Jan 21, 2020, 03.55 PM IST</p>  
+                    </div>
+                </div>
+                <div class="news-list-item">
+                    <div class="news-provider">
+                        <p>ECONOMIC TIMES</p>
+                    </div>
+                    <div class="news-headlines">
+                        <a href="">Shubh Loans has raised $4.8M as part of its Series A round</a>
+                    </div>
+                    <div class="post-date"><p>Jan 21, 2020, 03.55 PM IST</p>  
+                    </div>
+                </div>
+                <div class="news-list-item">
+                    <div class="news-provider">
+                        <p>ECONOMIC TIMES</p>
+                    </div>
+                    <div class="news-headlines">
+                        <a href=""> Shweta Doshi leads startup to fill the void in education technology for youth</a>
+                    </div>
+                    <div class="post-date"><p>Jan 21, 2020, 03.55 PM IST</p>  
+                    </div>
+                </div>
+            </div>
+            <div class="section-pill">IN twitter</div>
+            <div class="twitter-feed-wrapper">
+                <div class="twitter-feed-item">
+                    <p class="message">
+                        @Unitus_Capital congratulates Monish Anand, Rahul Sekar and the entire @shubhloans team on their US$4.8 million equity deal from Omidyar Network India, with participation from existing investors Saama Capital, Beenext, SRI Capital, and Pravega Ventures.
+                    </p>
+                    <div class="info">
+                        <p class="posted-timeline">23 Aug 2018</p>
+                        <div class="dp"></div>
+                    </div>
+                </div>
+                <div class="twitter-feed-item">
+                    <p class="message">
+                        Congratulations @FyleHQ @K2_181 @YashwantM .  Pravega is proud to be part of this journey @rohitjain
+                    </p>
+                    <div class="info">
+                        <p class="posted-timeline">23 Aug 2018</p>
+                        <div class="dp"></div>
+                    </div>
+                </div>
+                <div class="twitter-feed-item">
+                    <p class="message">
+                        I cringe every time I need to review an SHA/SSA -  definitions, if/else conditional, invariants - its source code but written in english.  Any founders working on this ? would love to talk.
+                    </p>
+                    <div class="info">
+                        <p class="posted-timeline">23 Aug 2018</p>
+                        <div class="dp"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-blog">
+        <div class="container">
+            <h1>Our Perspective</h1>
+            <div class="blog-wrapper">
+                <div class="blog-wrapper-item">
+                    <img src="https://pravega-contactimages-ap-south-1.s3.amazonaws.com/media/uploads/blog/145-blog3.jpg" alt="" class="blog-cover">
+                    <div class="blog-detail-info">
+                        <label class="topic">Technology</label>
+                        <h1><a>The worst Amazon shipping delays could still be ahead of us</a></h1>
+                        <p class="blog-summary">COVID-19 cases are spiking nationally, workers are getting sick, and I already can’t get groceries delivered in San Francisco</p>
+                        <p class="post-info">Jennie Williamson ,<span> Published: 5:30pm, 23 Mar, 2020</span> </p>
+                    </div>
+                </div>
+                <div class="blog-wrapper-item">
+                    <img src="https://pravega-contactimages-ap-south-1.s3.amazonaws.com/media/uploads/blog/facebook-1200x630.jpg" alt="" class="blog-cover">
+                    <div class="blog-detail-info">
+                        <label class="topic">Packaging</label>
+                        <h1><a>Zoom is 2020’s hottest yoga studio</a></h1>
+                        <p class="blog-summary">Instructors move online as studios shut down</p>
+                        <p class="post-info">Jennie Williamson ,<span> Published: 5:30pm, 23 Mar, 2020</span> </p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="hero-blog-footer">
+                <button class="secondary large"> Read All Our Blogs</button>
+            </div>
+        </div>
+        
+        
+    </section>
+
+
+    <footer>
+        <div class="container nav-container">
+            <div class="footer-wrapper">
+                <div class="left">
+                    <p>Pravega Ventures</p>
+                </div>
+                <div class="middle">
+                    <a href="">Portfolio</a>
+                    <a href="">Team</a>
+                    <a href="">Blog</a>
+                    <a href="">Contact Us</a>
+                    <a href="">Pravega Connect</a>
+                </div>
+                <div class="right">
+                    All Rights reserved by Pravega ventures 
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <!--News Ends-->
+    <script src="assets/js/main.js"></script>
+    <script>
+        //TOP SLIDER
+var heroSliderCounter = 0;
+
+function activeSlide(slideActiveCount) {
+    var slides = document.querySelectorAll('.hero-slider-item');
+    var slidesCount = slides.length;
+    for (i = 0; i < slidesCount; i++) {
+        if (i == slideActiveCount) {
+            slides[i].classList.add('active');
+        }
+        else {
+            slides[i].classList.remove('active');
+        }
+    }
+}
+function moveUp() {
+    var controller = document.getElementById('sliderController');
+    if (heroSliderCounter < 2) {
+        heroSliderCounter++;
+        activeSlide(heroSliderCounter);
+        var transformValue = -33.33 * heroSliderCounter;
+        controller.style.transform = "translateY(" + transformValue + "%)";
+    }
+    else {
+        heroSliderCounter = 0
+        activeSlide(heroSliderCounter);
+        var transformValue = -33.33 * heroSliderCounter;
+        controller.style.transform = "translateY(" + transformValue + "%)";
+    }
+}
+
+function moveDown() {
+    var controller = document.getElementById('sliderController');
+    if (heroSliderCounter > 0) {
+        heroSliderCounter--;
+        activeSlide(heroSliderCounter);
+        var transformValue = -33.33 * heroSliderCounter;
+        controller.style.transform = "translateY(" + transformValue + "%)";
+    }
+    else {
+        heroSliderCounter = 2
+        activeSlide(heroSliderCounter);
+        var transformValue = -33.33 * heroSliderCounter;
+        controller.style.transform = "translateY(" + transformValue + "%)";
+    }
+}
+
+
+var mySlider = setInterval(AutoHeroSlider, 6000)
+function AutoHeroSlider() {
+    var controller = document.getElementById('sliderController');
+    if (heroSliderCounter < 2) {
+        heroSliderCounter++;
+        activeSlide(heroSliderCounter);
+        var transformValue = -33.33 * heroSliderCounter;
+        controller.style.transform = "translateY(" + transformValue + "%)";
+    }
+    else {
+        heroSliderCounter = 0
+        activeSlide(heroSliderCounter);
+        var transformValue = -33.33 * heroSliderCounter;
+        controller.style.transform = "translateY(" + transformValue + "%)";
+    }
+}
+function stopSlider() {
+    clearInterval(mySlider);
+}
+
+function openModal() {
+    document.querySelector('.modal').style.display = "flex";
+    document.querySelector('body').style.overflow = "hidden";
+}
+function closeModal() {
+    document.querySelector('.modal').style.display = "none";
+    document.querySelector('body').style.overflow = "auto";
+}
+
+    </script>
+</body>
+
+</html>

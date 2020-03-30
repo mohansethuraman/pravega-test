@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/qwy7dph.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <!--navigation-->
+    <nav>
+        <div class="container nav-container">
+            <div class="nav-wrapper">
+                <div class="left">
+                    <a href="index.html" class="logo">Pravega Ventures</a>
+                </div>
+                <div class="right">
+                    <a href="portfolio.html">PORTFOLIO</a>
+                    <a href="team.html">TEAM</a>
+                    <a href="" class="active">BLOG</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!--navigation Ends-->
+
+    <!--Blog Hero-->
+    <div class="blog-hero">
+        <div class="blog-slide-main">
+            <div class="blog-indicator">
+                <div class="line active" onclick="activateSlide(this)"></div>
+                <div class="line" onclick="activateSlide(this)"></div>
+                <div class="line" onclick="activateSlide(this)"></div>
+            </div>
+            <div class="blog-slide-wrapper" sty>
+                <div class="blog-slide-item active" style="background-image: url('https://pravega-contactimages-ap-south-1.s3.amazonaws.com/media/uploads/blog/145-blog3.jpg');">
+                    <div class="container">
+                        <div class="blog-hero-content">
+                            <p class="topic">Technology</p>
+                            <h1>The worst Amazon shipping delays could still be ahead of us </h1>
+                            <p class="summary">COVID-19 cases are spiking nationally, workers are getting sick, and I already can’t get groceries delivered in San Francisco</p>
+                            <p class="post-info">Haneesa Begum  ,  Published: 5:30pm, 23 Mar, 2020</p>
+                            <button class="primary">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-slide-item" style="background-image: url('https://pravega-contactimages-ap-south-1.s3.amazonaws.com/media/uploads/blog/facebook-1200x630.jpg');">
+                    <div class="container">
+                        <div class="blog-hero-content">
+                            <p class="topic">Technology</p>
+                            <h1>What I like to see in seed pitches </h1>
+                            <p class="summary">Pitching at a seed/pre-seed stage means that you are in the business of selling dreams, period.</p>
+                            <p class="post-info">Haneesa Begum  ,  Published: 5:30pm, 23 Mar, 2020</p>
+                            <button class="primary">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-slide-item" style="background-image: url('https://pravega-contactimages-ap-south-1.s3.amazonaws.com/media/uploads/drone.jpg');">
+                    <div class="container">
+                        <div class="blog-hero-content">
+                            <p class="topic">Technology</p>
+                            <h1>Frontier-tech: Are we there yet?</h1>
+                            <p class="summary">Pitching at a seed/pre-seed stage means that you are in the business of selling dreams, period.</p>
+                            <p class="post-info">Haneesa Begum  ,  Published: 5:30pm, 23 Mar, 2020</p>
+                            <button class="primary">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="moreblogs">
+        <div class="container">
+            <div class="header">
+                <h1>More on Blogs</h1>
+                <input type="text" placeholder="Search by Tags">
+            </div>
+            
+            <div class="blog-wrapper">
+                <div class="blog-wrapper-item">
+                    <img src="https://pravega-contactimages-ap-south-1.s3.amazonaws.com/media/uploads/blog/145-blog3.jpg" alt="" class="blog-cover">
+                    <div class="blog-detail-info">
+                        <label class="topic">Technology</label>
+                        <h1><a>The worst Amazon shipping delays could still be ahead of us</a></h1>
+                        <p class="blog-summary">COVID-19 cases are spiking nationally, workers are getting sick, and I already can’t get groceries delivered in San Francisco</p>
+                        <p class="post-info">Jennie Williamson ,<span> Published: 5:30pm, 23 Mar, 2020</span> </p>
+                    </div>
+                </div>
+                <div class="blog-wrapper-item">
+                    <img src="https://pravega-contactimages-ap-south-1.s3.amazonaws.com/media/uploads/blog/facebook-1200x630.jpg" alt="" class="blog-cover">
+                    <div class="blog-detail-info">
+                        <label class="topic">Packaging</label>
+                        <h1><a>Zoom is 2020’s hottest yoga studio</a></h1>
+                        <p class="blog-summary">Instructors move online as studios shut down</p>
+                        <p class="post-info">Jennie Williamson ,<span> Published: 5:30pm, 23 Mar, 2020</span> </p>
+                    </div>
+                </div>
+                <div class="blog-wrapper-item">
+                    <img src="https://pravega-contactimages-ap-south-1.s3.amazonaws.com/media/uploads/blog/145-blog3.jpg" alt="" class="blog-cover">
+                    <div class="blog-detail-info">
+                        <label class="topic">Technology</label>
+                        <h1><a>The worst Amazon shipping delays could still be ahead of us</a></h1>
+                        <p class="blog-summary">COVID-19 cases are spiking nationally, workers are getting sick, and I already can’t get groceries delivered in San Francisco</p>
+                        <p class="post-info">Jennie Williamson ,<span> Published: 5:30pm, 23 Mar, 2020</span> </p>
+                    </div>
+                </div>
+                <div class="blog-wrapper-item">
+                    <img src="https://pravega-contactimages-ap-south-1.s3.amazonaws.com/media/uploads/blog/facebook-1200x630.jpg" alt="" class="blog-cover">
+                    <div class="blog-detail-info">
+                        <label class="topic">Packaging</label>
+                        <h1><a>Zoom is 2020’s hottest yoga studio</a></h1>
+                        <p class="blog-summary">Instructors move online as studios shut down</p>
+                        <p class="post-info">Jennie Williamson ,<span> Published: 5:30pm, 23 Mar, 2020</span> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </section>
+    <footer>
+        <div class="container nav-container">
+            <div class="footer-wrapper">
+                <div class="left">
+                    <p>Pravega Ventures</p>
+                </div>
+                <div class="middle">
+                    <a href="">Portfolio</a>
+                    <a href="">Team</a>
+                    <a href="">Blog</a>
+                    <a href="">Contact Us</a>
+                    <a href="">Pravega Connect</a>
+                </div>
+                <div class="right">
+                    All Rights reserved by Pravega ventures 
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    
+    
+    <script src="assets/js/main.js"></script>
+    <script>
+        
+    </script>
+</body>
+
+</html>
