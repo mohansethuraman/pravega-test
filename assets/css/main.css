@@ -1865,5 +1865,20 @@ footer .footer-wrapper .middle a:hover {
   .modal .detail .detail-content h1 {
     font-size: 1.6rem;
   }
+  .moreblogs .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .moreblogs .header h1 {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+  }
+  .moreblogs input {
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

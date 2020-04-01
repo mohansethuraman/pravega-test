@@ -1520,4 +1520,17 @@ footer{
             font-size: 1.6rem;
         }
     }
+    .moreblogs .header{
+        flex-direction: column;
+        h1{
+            text-align: left;
+            width: 100%;
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+        }
+        
+    }
+    .moreblogs input{
+        width: 90%;
+    }
 }
