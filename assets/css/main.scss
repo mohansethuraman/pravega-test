@@ -24,6 +24,8 @@ body{
 }
 a{
     cursor: pointer;
+    color: inherit;
+    text-decoration: none;
 }
 nav{
     padding: 30px 0;
@@ -35,14 +37,20 @@ nav{
     left:0;
     top:0;
     color:white;;
+    .pravega{
+        fill:white;
+    }
     .logo{
         font-size:23px;
         font-weight:500;
         color:inherit;
         text-decoration: none;
+        position: relative;
+        top:5px;
     }
     .nav-wrapper{
         display:flex;
+        align-items: center;
         .left{
             flex-basis: 200px;
         }
@@ -69,6 +77,18 @@ nav{
         background: white;
         color:#222;
         border-bottom: 1px solid #dbdbdb;
+        .pravega{
+            fill:$secondary;
+        }
+        #hamb{
+            fill:$secondary;
+        }
+    }
+    #hamb{
+        fill:white;
+    }
+    .mobile-menu{
+        display: none;
     }
 }
 
@@ -164,10 +184,12 @@ nav{
         bottom:320px;
         left:calc((100vw - 1140px)/2 - 60px);
         button{
-            height: 50px;width:50px;background: rgba(255,255,255,0.6);
+            height: 50px;width:50px;background: rgba(255,255,255,0.3);
             display: block;
             color:white;
             padding: 0;
+            border:0;
+            margin:2px;
         }
     }
     .pull-down{
@@ -182,14 +204,14 @@ button{
     padding: 10px 20px;
     cursor: pointer;
     &.primary{
-        background:darken($primary,5%);
+        background:darken($primary,2%);
         transition: all 0.3s ease;
         color:white;
         font-size:1rem;
         border:1px solid $primary;
         font-weight: 700;
         &:hover{
-            background: darken($primary,10%);
+            background: darken($primary,5%);
         }
     }
     &.large{
@@ -303,11 +325,10 @@ button{
             position: relative;
             z-index: 1;
             img{
-                height: 50px;
+                height: 60px;
                 width:auto;
                 object-fit: contain;
                 object-position: center;
-                background-color: white;
                 padding:0px;
             }
             h1{
@@ -458,7 +479,11 @@ button{
         padding-left: 40px;
         max-width: 600px;
         .topic{
-            opacity: 0.6;
+            font-weight: 500;
+            border-radius: 3px;
+            margin-bottom: 10px;
+            color: darken($primary,5%);
+
         }
         h1{
             font-size: 24px;
@@ -578,14 +603,20 @@ footer{
             letter-spacing: 0.6px;
             line-height: 1.6;
             transition: all 0.6s ease;
-
+            
         }
     }
 }
+.temp-portfolio-hero{
+    margin-top:150px;
+    padding-bottom: 50px;
+    h1{
+        font-size:3rem;
+    }
+}
 .filter-menu{
-    text-align: center;
     padding: 15px 0;
-    box-shadow:1px 10px 10px 1px rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid #dbdbdb;
     button{
         background: transparent;
         font-size:16px;
@@ -597,16 +628,21 @@ footer{
         background-color: darken($primary,5%);
         color:white;
     }
+    .filter-label{
+        font-size:20px;
+        margin-right: 15px;
+        font-weight: 500;
+    }
 }
 
 .portfolio-wrapper{
     padding: 40px 0;
-    border-bottom: 1px solid #dbdbdb;
     display: flex;
     flex-wrap: wrap;
     .portfolio-item{
+        border:1px solid #dbdbdb;
         cursor: pointer;
-        border:1px solid transparent;
+        // border:1px solid transparent;
         flex-basis: 33%;
         padding: 60px 30px 60px 30px;
         position: relative;
@@ -631,7 +667,7 @@ footer{
             
         }
         &:hover{
-            border:1px solid #dbdbdb;
+            border:2px solid $primary;
             img{
                 transform: scale(0.8);
 
@@ -643,14 +679,17 @@ footer{
     }
     
 }
-
+.past-investments{
+    margin-top:50px;
+    margin-bottom: 120px;
+}
 .past-investment-wrapper{
     display: flex;
     flex-wrap: wrap;
     margin: 0 -20px;
     .past-investment-item{
         flex-basis: 20%;
-        padding:10px 20px;
+        padding:20px;
         img{
             height:100px;
             width: 100%;
@@ -718,6 +757,23 @@ footer{
         }
         
     }
+    .team-detail{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        .social-links{
+            a{
+                margin-right:5px;
+            }
+        }
+        .detail-content{
+            transform: translateY(-60px);
+        }
+    }
+    &.open{
+        display: flex;
+    }
 }
 
 .data-group{
@@ -782,7 +838,7 @@ footer{
 }
 
 .team-intro{
-    margin-top: 180px;
+    margin-top: 150px;
     h1{
         font-size:3rem;
     }
@@ -936,6 +992,212 @@ footer{
         }
     }
 }
+.blog-view-header{
+    margin-top:100px;
+    .top-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        .share-links{
+            text-decoration: none;
+            a{
+                margin-left: 5px;
+            }
+        }
+    }
+    .blog-header-img{
+        width:100%;
+        height:400px;
+        object-fit: cover;
+    }
+}
+.breadcrumb{
+    a{
+        color:inherit;
+        text-decoration: none;
+        font-size:13px;
+        font-weight: 500;;
+        &::after{
+           content: " / "; 
+        }
+        &:last-child{
+            content:" ";
+            color:grey;
+            max-width: 200px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+    }
+}
+
+.blog-view-detail{
+    .topic{
+        font-size:18px;
+        color:darken($primary,4%);
+        margin-bottom: 10px;
+        font-weight: 500;
+        
+    }
+    .blog-title{
+        font-size:2.4rem;
+        font-family: "Merriweather";
+        margin-top:0;
+        max-width: 900px;
+        line-height: 1.4;
+    }
+    .summary{
+        opacity: 0.6;
+        font-size:20px;
+        font-weight: 300;
+        max-width: 800px;
+    }
+    .posted-info{
+        font-size:14px;
+        font-weight: 500;
+        span{
+            color:grey;
+        }
+    }
+}
+.blog-grid{
+    display: flex;
+    .left{
+        flex-basis:8.333%;
+        .decorator-line{
+            width:100%;
+            border-top:2px solid $secondary;
+            margin-top:30px;
+        }
+    }
+    .center{
+        flex-basis: 70%;
+        max-width: 720px;
+        padding: 0 20px
+    }
+    .right{
+        padding:0 20px;
+    }
+}
+
+.blog-body-content{
+    &::selection{
+        background-color: $primary;
+    }
+    p{
+        font-size:18px;
+        line-height: 1.8;
+        font-family: "Merriweather";
+        font-weight: 300;
+    }
+    blockquote{
+        font-size:32px;
+        font-family: "Merriweather";
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.5;
+        border-left:5px solid $secondary;
+        margin-left:0;
+        padding-left: 30px;
+    }
+    img{
+        width:100%;
+        height: auto;
+    }
+    ul{
+        font-family: "Merriweather";
+        li{
+            font-size:18px;
+            line-height: 1.8;
+            font-weight: 300;
+            margin: 20px 0;
+        }
+    }
+    a{
+        color: darken($primary,2%);
+        font-weight: 500;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+.comments{
+    margin: 50px 0;
+}
+.tag{
+    display: inline-block;
+    padding: 2px 5px;
+    border:1px solid $secondary;
+    background: #fafafa;
+    border-radius: 3px;
+    margin: 5px 2px;
+}
+.contact{
+    margin-top:60px;
+    display: flex;
+    .left{
+        flex-basis: 50%;
+        .contact-content{
+            max-width: 350px;
+            margin: 120px auto;
+            h1{
+                font-size: 2.6rem;
+            }
+            h3{
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+            .tabs{
+                .tab{
+                    display:inline-block;
+                    margin-right:30px;
+                    padding-bottom: 10px;
+                    font-size:18px;
+                    cursor: pointer;
+                    &.active{
+                        font-weight: 500;
+                        border-bottom: 4px solid $primary;
+                    }
+                }
+            }
+            .address{
+                font-size:24px;
+                line-height: 1.8;
+                font-weight: 300;
+            }
+        }
+    }
+    .right{
+        flex-basis:50%;
+        height: calc(100vh - 60px);
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            animation:fadeIn 0.6s ease 1;
+        }
+    }
+}
+
+#delMap{
+    display: none;
+}
+#del-address{
+    display:none;
+    animation: slideLeft 0.6s ease 1;
+}
+#ban-address{
+    animation: slideRight 0.6s ease 1; 
+}
+
+
+
 
 @keyframes scaleUp {
     0%{
@@ -947,5 +1209,315 @@ footer{
 @keyframes fadeIn {
     0%{
         opacity: 0.95;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+@keyframes slideRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+
+@media(max-width:786px){
+    button.large{
+        padding: 10px 20px;
+    }
+    nav{
+        padding:20px 0;
+        background-color: rgba(0, 0, 0, 0.52);
+        .nav-wrapper{
+            .right{
+                position: absolute;
+                width:100%;
+                top:65px;
+                text-align: center;
+                left:0;
+                background: rgba(0, 0, 0, 0.82);
+                transition: all 0.6s ease;
+                a{
+                    display: block;
+                    padding: 10px 20px;
+                    margin-bottom: 10px;;
+                    margin-left:0;
+                }
+                transform: translateY(-1000px);
+                &.open{
+                    transform: none;
+                }
+            }
+        }
+        .mobile-menu{
+            display: block;
+            flex-basis: calc(100% - 200px);
+            text-align: right;
+            svg{
+                transition: all 0.6s ease;
+            }
+            &.open{
+                svg{
+                    
+                    transform: rotate(90deg);
+                }
+                
+            }
+        }
+        &.fixed{
+            .nav-wrapper{
+                .right{
+                    background: white;
+                    box-shadow:1px 10px 10px 1px rgba(0,0,0,0.1)
+                }
+            }
+        }
+    }
+    .recents{
+        flex-direction: column;
+        .recent-list-slider-item{
+            flex-basis: auto;
+            flex-direction: column;
+            min-height: 350px;
+            height: auto;
+            .recent-list-item{
+                flex-basis: auto;
+                height:200px;
+            }
+        }
+    }
+    .blog-wrapper-item{
+        flex-direction: column;
+        .blog-detail-info{
+            padding-left: 0;
+            margin-top: 20px;
+        }
+    }
+    .hero{
+        min-height: 360px;
+    }
+    .hero .hero-slider-wrapper .hero-slider-item .hero-content{
+        position: relative;
+        top:120px;
+        padding:20px;
+        .title{
+            font-size:2rem;
+        }
+        .sub-title{
+            font-size:16px;
+        }
+    }
+    .motto {
+        padding: 10vh 0;
+        h1{
+        font-size: 1.6rem;
+    }
+    .moto-content{
+        padding: 20px;
+    }
+    }
+    .recents{
+        .left{
+            height:300px;
+            .content{
+                width: 90%;
+            }
+        }
+    }
+    .news-list-item{
+        flex-direction: column;
+        .post-date{
+            margin-top:20px;
+        }
+    }
+    .news h1,.hero-blog h1{
+        font-size:1.5rem
+    }
+    .twitter-feed-wrapper{
+        flex-direction: column;
+        .twitter-feed-item{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    .blog-wrapper-item img{
+        width:100%;
+    }
+    .recent-list-slider-item .recent-list-item p.caption{
+        font-size: 1.2rem;
+        padding:20px;
+    }
+    .recent-list-slider-item .recent-list-item {
+        padding:20px;
+    }
+    .recents .left .content h1{
+        font-size: 1.6rem;
+        padding-top: 20px;
+    }
+    .news-list-item .news-headlines a {
+        font-size:1rem;
+    }
+    footer .footer-wrapper{
+        flex-direction: column;
+        .left,.middle,.right{
+            flex-basis: 100%;
+            text-align: center;
+        }
+        svg{
+            margin-bottom: 10px;
+        }
+    }
+    .blog-wrapper-item{
+        .blog-detail-info{
+            h1{
+                font-size: 1.2rem;
+            }
+            .blog-summary{
+                font-size: 14px;
+            }
+            .post-info{
+                font-size:12px;
+            }
+        }
+    }
+    .temp-portfolio-hero h1{
+        font-size: 1.6rem;
+    }
+    .filter-menu{
+        span{
+            display:none
+        }
+    }
+    .portfolio-wrapper .portfolio-item{
+        flex-basis: 100%;
+        padding: 30px;
+    }
+    .portfolio-wrapper .portfolio-item img{
+        transform: scale(0.6);
+    }
+    .portfolio-wrapper .portfolio-item .portfolio-caption{
+        transform: none;
+    }
+    .filter-menu button{
+        padding: 5px 10px;
+    }
+    .past-investments{
+        margin-top:10px;
+        h1{
+            font-size: 1.3rem;
+        }
+    }
+    .past-investment-wrapper{
+        .past-investment-item{
+            flex-basis: 50%;
+            img{
+                height: 60px;
+            }
+        }
+    }
+    .temp-portfolio-hero{
+        margin-top: 100px;
+        padding-bottom: 20px;
+    }
+    .modal{
+        
+    &.open{
+        display: block;
+        overflow: auto;
+    }
+    }
+    .data-row{
+        flex-wrap: wrap;
+    }
+    .team-intro h1{
+        font-size:1.6rem
+    }
+    .team-wrapper .team-item{
+        flex-basis: 100%;
+        height:40vh;
+        .team-info{
+            transform: none;
+        }
+    }
+    .team-intro{
+        margin-top: 100px;
+    }
+    .blog-hero .blog-slide-main .blog-slide-wrapper .blog-slide-item{
+        padding-top: 100px;
+    }
+    .blog-hero .blog-slide-main .blog-slide-wrapper .blog-slide-item .blog-hero-content h1{
+        font-size: 1.6rem;
+    }
+    .blog-hero .blog-slide-main .blog-slide-wrapper .blog-slide-item .blog-hero-content .summary{
+        font-size: 1.2rem;
+    }
+    .blog-hero{
+        height: 600px;
+    }
+    .blog-view-header .top-wrapper{
+        flex-direction: column;
+        .breadcrumb{
+            margin-bottom: 10px;
+        }
+    }
+    .blog-view-header .blog-header-img{
+        height: 200px;
+    }
+    .blog-view-detail{
+        .blog-title{
+            font-size: 24px;
+        }
+        .summary{
+            font-size: 18px;
+        }
+    }
+    .blog-grid{
+        flex-direction: column;
+    }
+    .blog-body-content blockquote{
+        font-size:1.5rem
+    }
+    .contact{
+        flex-direction: column-reverse;
+        .right{
+            height:200px;
+            flex-basis: auto;
+            img{
+                height: 220px;
+            }
+        }
+        .left a{
+            display: block;
+        }
+        .left{
+            flex-basis: auto;
+            .contact-content h1{
+                font-size: 1.6rem;
+            }
+            .contact-content{
+                margin-top: 60px;
+                padding: 10px 30px;
+                h3{
+                    font-size: 1.2rem;
+                }
+                .tabs .tab{
+                    font-size: 16px;
+                }
+                .address{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+       
+
+    }
+    .modal .detail .detail-content{
+        h1{
+            font-size: 1.6rem;
+        }
     }
 }
