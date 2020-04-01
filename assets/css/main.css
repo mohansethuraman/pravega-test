@@ -1553,7 +1553,19 @@ footer .footer-wrapper .middle a:hover {
   }
 }
 
+@media (max-width: 1260px) {
+  .hero .hero-slider-wrapper .hero-slider-item .container {
+    max-width: 1000px;
+  }
+  .hero .hero-slider-nav {
+    left: 10px;
+  }
+}
+
 @media (max-width: 786px) {
+  .hero .hero-slider-nav {
+    display: none;
+  }
   button.large {
     padding: 10px 20px;
   }
