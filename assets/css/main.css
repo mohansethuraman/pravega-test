@@ -1635,6 +1635,7 @@ footer .footer-wrapper .middle a:hover {
   }
   .hero {
     min-height: 360px;
+    max-height: 650px;
   }
   .hero .hero-slider-wrapper .hero-slider-item .hero-content {
     position: relative;
