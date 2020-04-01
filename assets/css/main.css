@@ -1717,7 +1717,7 @@ footer .footer-wrapper .middle a:hover {
     margin-bottom: 10px;
   }
   .blog-wrapper-item .blog-detail-info h1 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .blog-wrapper-item .blog-detail-info .blog-summary {
     font-size: 14px;
@@ -1880,6 +1880,20 @@ footer .footer-wrapper .middle a:hover {
   }
   .moreblogs input {
     width: 90%;
+  }
+  #closeModal {
+    top: 20px;
+    right: 10px;
+  }
+  footer .footer-wrapper .middle a {
+    display: block;
+    padding: 10px;
+  }
+  .page-pill {
+    padding-left: 30px;
+  }
+  .page-pill:before {
+    width: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */
