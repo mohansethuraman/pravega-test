@@ -41,6 +41,7 @@ var blogLinesCount = blogLines.length;
 
 
  function activateSlide(element){
+            stopSlider();
              var count = Array.from(element.parentNode.children).indexOf(element);
              blogSliderCount = count;
              changeSlide(blogSliderCount);
@@ -48,6 +49,7 @@ var blogLinesCount = blogLines.length;
                  blogLines[i].classList.remove('active');
              }
              element.classList.add('active');
+             blogSlider = setInterval(AutoBlogSlider,6000);
     }
 
 function changeSlide(count){
@@ -77,6 +79,10 @@ function AutoBlogSlider(){
         
 }
 var blogSlider = setInterval(AutoBlogSlider,6000);
+
+function stopSlider(){
+    clearInterval(blogSlider);
+}
 
 function showDelAddress(el){
     el.classList.add('active');
