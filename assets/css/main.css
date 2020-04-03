@@ -298,6 +298,14 @@ button.secondary:hover {
   font-size: 3rem;
 }
 
+.motto .motoashero {
+  max-width: 100%;
+}
+
+.motto .motoashero h1 {
+  font-size: 3.5rem;
+}
+
 .page-pill {
   padding-left: 80px;
   position: relative;

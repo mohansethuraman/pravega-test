@@ -1,6 +1,6 @@
 window.addEventListener('scroll', function () {
     var topValue = this.scrollY;
-    if (document.title == "Team" || document.title=="Portfolio" || document.title=="Contact" ) {
+    if (document.title == "Team" || document.title=="Portfolio" || document.title=="Contact" || document.title=="Home" ) {
 
     }
     else {
