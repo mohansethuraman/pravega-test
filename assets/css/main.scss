@@ -1167,7 +1167,7 @@ footer{
         flex-basis: 50%;
         .contact-content{
             max-width: 350px;
-            margin: 120px auto;
+            margin: 80px auto;
             h1{
                 font-size: 2.6rem;
             }
@@ -1216,9 +1216,25 @@ footer{
 #del-address{
     display:none;
     animation: slideLeft 0.6s ease 1;
+    margin-bottom: 30px;
+
 }
 #ban-address{
     animation: slideRight 0.6s ease 1; 
+    
+}
+.phone ,.mail{
+    margin:10px 0;
+    font-size:20px;
+    svg{
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+}
+.contact-content{
+    a button{
+        margin-top: 30px;
+    }
 }
 
 
