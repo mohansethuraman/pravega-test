@@ -101,6 +101,159 @@ function showBanAddress(el){
     document.querySelector('.tabs .tab:nth-child(2)').classList.remove('active');
 }
 
+var recentItems=document.querySelectorAll('.recent-list-item');
+var recentItemsCount = recentItems.length;
+var recentCounter=0;
+var isMobile;
+var maxCount=0;
+function initializeRecentCaousel(){
+    recentCounter=0;
+    isMobile=false;
+    if(recentItemsCount<3){
+        document.querySelector('.recent-list-nav').style.display="none";
+    }
+    var windowWidth = window.innerWidth;
+
+    if(windowWidth<786){
+        document.querySelector('.recent-list-slider-wrapper').style.width=(recentItemsCount * 100)+'vw';
+        maxCount = recentItemsCount-1;
+        isMobile=true;
+    }
+    else{
+        document.querySelector('.recent-list-slider-wrapper').style.width=(recentItemsCount * 33.33)+'vw';
+        maxCount = Math.round((recentItemsCount-2)/2);
+    }
+
+    for(i=0;i<recentItemsCount;i++){
+        recentItems[i].style.display="block";
+    }
+    document.querySelector('.recent-list-slider-wrapper').style.transform="none";
+}
+
+
+function moveLeft(){
+    clearInterval(RecentSlide);
+    if(recentCounter<maxCount){
+        recentCounter++;
+        if(recentCounter== maxCount){
+            if(recentItemsCount%2==0){
+                var transformValue= -(recentCounter*66.66)+"vw";
+                if(isMobile){
+                    transformValue = -(recentCounter*100)+"vw";
+                }
+                document.querySelector('.recent-list-slider-wrapper').style.transform="translateX("+transformValue+")";
+            }
+            else{
+                var transformValue= -(recentCounter*66.66 - 33.33)+"vw";
+                if(isMobile){
+                    transformValue = -(recentCounter*100)+"vw";
+                }
+                document.querySelector('.recent-list-slider-wrapper').style.transform="translateX("+transformValue+")"; 
+            }
+        }
+        else{
+            var transformValue= -(recentCounter*66.66)+"vw";
+            if(isMobile){
+                transformValue = -(recentCounter*100)+"vw";
+            }
+            document.querySelector('.recent-list-slider-wrapper').style.transform="translateX("+transformValue+")";
+
+        }   
+    }
+    else{
+        recentCounter=0;
+        document.querySelector('.recent-list-slider-wrapper').style.transform="none";
+    }
+    RecentSlide = setInterval(AutoRecentSlide,6000);
+
+}
+
+function moveRight(){ 
+    clearInterval(RecentSlide);
+    if(recentCounter>0 && recentCounter<=maxCount){
+        recentCounter--;
+        if(recentCounter>maxCount){
+            if(recentItemsCount%2==0){
+                var transformValue= -(recentCounter*66.66)+"vw";
+                if(isMobile){
+                    transformValue = -(recentCounter*100)+"vw";
+                }
+                document.querySelector('.recent-list-slider-wrapper').style.transform="translateX("+transformValue+")";
+            }
+            else{
+                var transformValue= -(recentCounter*66.66 - 33.33)+"vw";
+                if(isMobile){
+                    transformValue = -(recentCounter*100)+"vw";
+                }
+                document.querySelector('.recent-list-slider-wrapper').style.transform="translateX("+transformValue+")"; 
+            }
+        }
+        else{
+            var transformValue= -(recentCounter*66.66)+"vw";
+            if(isMobile){
+                transformValue = -(recentCounter*100)+"vw";
+            }
+            document.querySelector('.recent-list-slider-wrapper').style.transform="translateX("+transformValue+")";
+
+        }   
+    }
+    else{
+        document.querySelector('.recent-list-slider-wrapper').style.transform="translateX("+transformValue+")";
+        recentCounter=maxCount;
+        if(recentItemsCount%2==0){
+            var transformValue= -(recentCounter*66.66)+"vw";
+            if(isMobile){
+                transformValue = -(recentCounter*100)+"vw";
+            }
+            document.querySelector('.recent-list-slider-wrapper').style.transform="translateX("+transformValue+")";
+        }
+        else{
+            var transformValue= -(recentCounter*66.66 - 33.33)+"vw";
+            if(isMobile){
+                transformValue = -(recentCounter*100)+"vw";
+            }
+            document.querySelector('.recent-list-slider-wrapper').style.transform="translateX("+transformValue+")"; 
+        }
+    } 
+    RecentSlide = setInterval(AutoRecentSlide,6000);
+}
+
+function AutoRecentSlide(){
+    if(recentCounter<maxCount){
+        recentCounter++;
+        if(recentCounter== maxCount){
+            if(recentItemsCount%2==0){
+                var transformValue= -(recentCounter*66.66)+"vw";
+                if(isMobile){
+                    transformValue = -(recentCounter*100)+"vw";
+                }
+                document.querySelector('.recent-list-slider-wrapper').style.transform="translateX("+transformValue+")";
+            }
+            else{
+                var transformValue= -(recentCounter*66.66 - 33.33)+"vw";
+                if(isMobile){
+                    transformValue = -(recentCounter*100)+"vw";
+                }
+                document.querySelector('.recent-list-slider-wrapper').style.transform="translateX("+transformValue+")"; 
+            }
+        }
+        else{
+            var transformValue= -(recentCounter*66.66)+"vw";
+            if(isMobile){
+                transformValue = -(recentCounter*100)+"vw";
+            }
+            document.querySelector('.recent-list-slider-wrapper').style.transform="translateX("+transformValue+")";
+
+        }   
+    }
+    else{
+        recentCounter=0;
+        document.querySelector('.recent-list-slider-wrapper').style.transform="none";
+    }
+}
+
+var RecentSlide = setInterval(AutoRecentSlide,6000);
+
 
 
 

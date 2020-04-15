@@ -148,25 +148,52 @@
                     <h1>Check Out Recent Investments</h1> 
                     <button class="secondary large">All Investments</button>
                 </div>
+                <div class="recent-list-nav">
+                    <button id="left_nav" onclick="moveLeft()"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.6288 6.37341L16 6.37341V8.37341L3.85258 8.37341L7.81358 12.6391L6.34799 14L0.826576 8.05386L0.242359 7.4247L0.775871 6.75201L5.6602 0.593507L7.2272 1.8363L3.6288 6.37341Z" fill="#1F1F1F" fill-opacity="0.8"/>
+                        </svg>
+                        </button>
+                    <button id="right_nav" onclick="moveRight()"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3712 6.37341L0 6.37341L0 8.37341L12.1474 8.37341L8.18642 12.6391L9.65201 14L15.1734 8.05386L15.7576 7.4247L15.2241 6.75201L10.3398 0.593507L8.7728 1.8363L12.3712 6.37341Z" fill="#1F1F1F"/>
+                        </svg>
+                        </button>
+                </div>
                 
             </div>
             <div class="right">
                 <div class="recent-list-main-wrapper">
                     <div class="recent-list-slider-wrapper">
-                        <div class="recent-list-slider-item">
                             <div class="recent-list-item" style="background-image:url('https://images.unsplash.com/photo-1578670812003-60745e2c2ea9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')">
                                 <div class="recent-list-content">
                                     <img src="./assets/img/mintoakpng.png" alt="">
                                 </div> 
-                                <p class="caption">Technology Enabled B2B Marketplace for fresh foods.</p>
+                                <p class="caption">1.Technology Enabled B2B Marketplace for fresh foods.</p>
                             </div>
                             <div class="recent-list-item" style="background-image:url('https://images.unsplash.com/photo-1512075135822-67cdd9dd7314?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80')">
                                 <div class="recent-list-content">
                                     <img src="./assets/img/sg.png" alt="">
                                 </div> 
-                                <p class="caption">Skilling & learning platform for upcoming technologies</p>
+                                <p class="caption">2.Skilling & learning platform for upcoming technologies</p>
                             </div>
-                        </div>
+                            <div class="recent-list-item" style="background-image:url('https://images.unsplash.com/photo-1512075135822-67cdd9dd7314?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80')">
+                                <div class="recent-list-content">
+                                    <img src="./assets/img/sg.png" alt="">
+                                </div> 
+                                <p class="caption">3.Skilling & learning platform for upcoming technologies</p>
+                            </div>
+                            <div class="recent-list-item" style="background-image:url('https://images.unsplash.com/photo-1578670812003-60745e2c2ea9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')">
+                                <div class="recent-list-content">
+                                    <img src="./assets/img/mintoakpng.png" alt="">
+                                </div> 
+                                <p class="caption">4.Technology Enabled B2B Marketplace for fresh foods.</p>
+                            </div>
+                            <div class="recent-list-item" style="background-image:url('https://images.unsplash.com/photo-1512075135822-67cdd9dd7314?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80')">
+                                <div class="recent-list-content">
+                                    <img src="./assets/img/sg.png" alt="">
+                                </div> 
+                                <p class="caption">5.Skilling & learning platform for upcoming technologies</p>
+                            </div>
+                            
                     </div>
                     
                 </div>
@@ -384,6 +411,10 @@ function closeModal() {
     document.querySelector('.modal').style.display = "none";
     document.querySelector('body').style.overflow = "auto";
 }
+window.addEventListener('resize',function(){
+    initializeRecentCaousel();
+});
+initializeRecentCaousel();
 
     </script>
 </body>

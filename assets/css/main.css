@@ -353,6 +353,8 @@ button.secondary:hover {
 .recents .left {
   -ms-flex-preferred-size: 33.33%;
       flex-basis: 33.33%;
+  min-width: 33.33%;
+  position: relative;
   padding: 40px;
   height: 491px;
   background-color: #EEEEEE;
@@ -391,21 +393,28 @@ button.secondary:hover {
   border: 1px solid #dbdbdb;
 }
 
-.recent-list-slider-wrapper {
-  height: 100%;
+.recent-list-main-wrapper {
+  overflow: hidden;
+  width: 66.66vw;
 }
 
-.recent-list-slider-item {
+.recent-list-slider-wrapper {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
-.recent-list-slider-item .recent-list-item {
+.recent-list-item {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  display: none;
+  -ms-flex-preferred-size: 33.33vw;
+      flex-basis: 33.33vw;
+  min-width: 33.33vw;
   border-right: 1px solid white;
   background-size: cover;
   background-position: center;
@@ -416,7 +425,7 @@ button.secondary:hover {
   position: relative;
 }
 
-.recent-list-slider-item .recent-list-item:after {
+.recent-list-item:after {
   position: absolute;
   content: "";
   top: 0;
@@ -426,12 +435,12 @@ button.secondary:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.recent-list-slider-item .recent-list-item .recent-list-content {
+.recent-list-item .recent-list-content {
   position: relative;
   z-index: 1;
 }
 
-.recent-list-slider-item .recent-list-item .recent-list-content img {
+.recent-list-item .recent-list-content img {
   height: 60px;
   width: auto;
   -o-object-fit: contain;
@@ -441,13 +450,13 @@ button.secondary:hover {
   padding: 0px;
 }
 
-.recent-list-slider-item .recent-list-item .recent-list-content h1 {
+.recent-list-item .recent-list-content h1 {
   font-size: 2.5rem;
   margin-top: 10px;
   font-weight: 500;
 }
 
-.recent-list-slider-item .recent-list-item p.caption {
+.recent-list-item p.caption {
   padding: 30px 50px;
   position: absolute;
   bottom: 0;
@@ -457,15 +466,20 @@ button.secondary:hover {
   z-index: 1;
 }
 
-.recent-list-slider-item .recent-list-item:hover {
+.recent-list-item:hover {
   position: relative;
   z-index: 2;
   -webkit-transform: scale(1.04);
           transform: scale(1.04);
 }
 
-.recent-list-slider-item .recent-list-item:hover:after {
+.recent-list-item:hover:after {
   background: rgba(0, 0, 0, 0.5);
+}
+
+.recent-list-content {
+  position: relative;
+  z-index: 1;
 }
 
 .news {
@@ -1538,6 +1552,23 @@ footer .footer-wrapper .middle a:hover {
   margin-top: 30px;
 }
 
+.recent-list-nav {
+  position: absolute;
+  top: calc(50% - 50px);
+  right: -25px;
+  z-index: 3;
+  width: 50px;
+}
+
+.recent-list-nav button {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  background: white;
+  border: 1px solid #dbdbdb;
+  margin-bottom: 5px;
+}
+
 @-webkit-keyframes scaleUp {
   0% {
     opacity: 1;
@@ -1665,20 +1696,29 @@ footer .footer-wrapper .middle a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .recents .recent-list-slider-item {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    min-height: 350px;
-    height: auto;
+  .recents .recent-list-slider-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .recents .recent-list-slider-item .recent-list-item {
-    -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-    height: 200px;
+  .recents .left .content button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .recent-list-main-wrapper {
+    width: 100%;
+  }
+  .recent-list-item {
+    -ms-flex-preferred-size: 100vw;
+        flex-basis: 100vw;
+    height: 300px;
+  }
+  .recent-list-nav {
+    width: 120px;
+    top: auto;
+    left: calc(50% - 50px);
+    bottom: -25px;
+    z-index: 5;
   }
   .blog-wrapper-item {
     -webkit-box-orient: vertical;
