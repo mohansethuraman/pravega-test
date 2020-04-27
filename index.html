@@ -43,7 +43,7 @@
 
     <!--hero-->
     <div class="hero">
-        <div class="hero-slider-nav">
+        <!-- <div class="hero-slider-nav">
             <button id="up" onclick="moveUp()">
                 <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -58,7 +58,7 @@
                         fill="#FFF4F4" />
                 </svg>
             </button>
-        </div>
+        </div> -->
         <div class="hero-main-wrapper">
             <div class="hero-slider-wrapper" id="sliderController">
                 <div class="hero-slider-item active"
@@ -383,7 +383,7 @@ function moveDown() {
 }
 
 
-var mySlider = setInterval(AutoHeroSlider, 6000)
+// var mySlider = setInterval(AutoHeroSlider, 6000)
 function AutoHeroSlider() {
     var controller = document.getElementById('sliderController');
     if (heroSliderCounter < 2) {

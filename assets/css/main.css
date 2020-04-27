@@ -179,11 +179,11 @@ nav .mobile-menu {
   bottom: 13vh;
   width: 100%;
   color: white;
-  max-width: 845px;
+  max-width: 945px;
 }
 
 .hero .hero-slider-wrapper .hero-slider-item .hero-content h1 {
-  font-size: 3.6rem;
+  font-size: 4.2rem;
   margin-bottom: 20px;
   font-weight: 500;
   line-height: 1.2;
@@ -1088,6 +1088,12 @@ footer .footer-wrapper .middle a:hover {
   text-decoration: none;
 }
 
+.portfolio-news .portfolio-news-item p {
+  margin: 5px 0;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
 .team-intro {
   margin-top: 150px;
 }
@@ -1541,6 +1547,7 @@ footer .footer-wrapper .middle a:hover {
 .phone, .mail {
   margin: 10px 0;
   font-size: 20px;
+  font-weight: 300;
 }
 
 .phone svg, .mail svg {
